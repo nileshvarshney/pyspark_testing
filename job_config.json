@@ -1,0 +1,28 @@
+{
+  "source": [
+    {
+      "name": "fact",
+      "storeType": "object_store",
+      "storeConfig": {
+        "path": "tests/resources/input/orders_data.csv",
+        "format": "csv"
+      }
+    },
+    {
+      "name": "lookup",
+      "storeType": "object_store",
+      "storeConfig": {
+        "path": "tests/resources/input/zip.csv",
+        "format": "csv"
+      }
+    }
+  ],
+  "sink": {
+    "storeType": "object_store",
+    "storeConfig": {
+      "path": "sink/{env}",
+      "format": "csv",
+      "mode": "overwrite"
+    }
+  }
+}
